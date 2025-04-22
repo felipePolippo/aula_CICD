@@ -8,20 +8,20 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
-        - name: Clonar o repositório
-          uses: actions/checkout@v3
+      - name: Clonar o repositório
+        uses: actions/checkout@v3
 
-        - name: Instalar compilador GCC
-          run: sudo apt update && sudo apt install build-essential -y
+      - name: Instalar compilador GCC
+        run: sudo apt update && sudo apt install build-essential -y
 
-        - name: compilar o programa
-          run: gcc Github.c -o programa
+      - name: compilar o programa
+        run: gcc Github.c -o programa
 
-        - name: Executar o programa
-          run: ./programa
+      - name: Executar o programa
+        run: ./programa
 
-        - name: Executar testes automatizados
-          run: |
+      - name: Executar testes automatizados
+        run: |
             gcc -o teste teste.c
             ./teste
 
