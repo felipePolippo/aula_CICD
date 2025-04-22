@@ -3,26 +3,26 @@ name: CI para c
 on:
   push:
 
-  jobs:
+jobs:
     build:
       runs-on: ubuntu-latest
 
       steps:
-      - name: clonar o repositório
-        Uses: actions/checkout@v3
+        - name: clonar o repositório
+          uses: actions/checkout@v3
 
-        -name: Instalar compilador GCC
-        run: sudo apt update && sudo apt install build-essential -y
+        - name: Instalar compilador GCC
+          run: sudo apt update && sudo apt install build-essential -y
 
-        -name: compilar o programa
-        run: gcc Github.c -o programa
+        - name: compilar o programa
+          run: gcc Github.c -o programa
 
-        -name: Executar o programa
-        run: ./programa
+        - name: Executar o programa
+          run: ./programa
 
-        -name: Executar testes automatizados
-        run: |
-          gcc -o teste teste.c
+        - name: Executar testes automatizados
+          run: |
+            gcc -o teste teste.c
             ./teste
 
         
