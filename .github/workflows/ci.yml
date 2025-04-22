@@ -8,7 +8,7 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
-        - name: clonar o repositório
+        - name: Clonar o repositório
           uses: actions/checkout@v3
 
         - name: Instalar compilador GCC
