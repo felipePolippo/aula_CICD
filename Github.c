@@ -1,5 +1,6 @@
-#include <studio.h>
+#include <stdio.h>
 
-int main(){
+int main() {
   printf("ola, github actins!\n");
-return 0;}
+  return 0;
+}
